@@ -16,19 +16,19 @@ This repository provides a guide on how to integrate the OpenAI's ChatGPT langua
 
 1. Clone the repository or download the `chatgpt-tele.py` file.
 
-2. Copy the `chatgpt-tele.py` file to the EC2 instance. You can use the following command to transfer the file from your local machine to the EC2 instance:
+2. Create a `config.ini` file and store the Telegram bot's API key and the ChatGPT model's API key in the following format:
 
-   scp chatgpt-tele.py ec2-user@ec2-instance-ip:/home/ec2-user
+   [DEFAULT]
+   TELEGRAM_API_KEY = your_telegram_api_key
+   OPENAI_API_KEY = your_openai_api_key
+   
+3. Copy the `chatgpt-tele.py` file and the `config.ini` to the EC2 instance. You can use the following command to transfer the file from your local machine to the EC2 instance:
 
-3. Connect to the EC2 instance using the following command:
+   scp chatgpt-tele.py config.ini ec2-user@ec2-instance-ip:/home/ec2-user
+
+4. Connect to the EC2 instance using the following command:
 
    ssh ec2-user@ec2-instance-ip
-
-
-4. Open the `chatgpt-tele.py` file in a text editor and update the following variables with your Telegram bot's API key and the ChatGPT model's API key:
-
-   TELEGRAM_API_KEY = 'your_telegram_api_key'
-   OPENAI_API_KEY = 'your_openai_api_key'
 
 
 5. Run the `chatgpt-tele.py` file with the following command:
