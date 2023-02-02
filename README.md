@@ -1,4 +1,4 @@
-# ChatGPT Telegram Bot Integration with AWS EC2
+# ChatGPT Telegram Bot Integration with Python and AWS EC2
 
 ## Introduction
 
